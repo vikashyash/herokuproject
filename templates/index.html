@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>model deployment</title>
+
+</head>
+<body>
+     <h1>SALARY PREDICTION:</h1>
+
+     <form action="{{url_for('predict')}}" method='post'>
+      <!-- <link rel="stylesheet" href="{{url_for('static',filename='index.css')}}"> -->
+
+     <!-- in the above line we are using dynamic variable in html and redirecting to predict function with the help of url_for and taking the form input once again to the predict function -->
+    <label>Experience:</label><br>
+  <input type="text" id="experience" name="experience" placeholder="Enter your experience"><br><br>
+  <label>Testscore:</label><br>
+  <input type="text" id="testscore" name='testscore'placeholder="Enter your test score"><br><br>
+  <label >Interviewscore:</label><br>
+  <input type="text" id="interviewscore" name="interviewscore" placeholder="Enter your interview score"><br></br>
+  
+ <button type="submit">predict</button>
+
+</form>
+  <br>
+  <br>
+  <h1>{{prediction_text}}</h1>
+
+  <!-- in the above line we are calling the final output inside the dynamic variable. -->
+</body>
+</html>
